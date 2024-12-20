@@ -1,0 +1,237 @@
+% Template created by: Amith Mathew Titus
+% Date: 2024-11-12
+% Description: This is a custom template for creating project reports.
+% Email: amithmathewtitus@outlook.com
+
+\documentclass[english,12pt,a4paper,oneside]{book}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage{amsmath, amssymb}
+\usepackage{amsthm}
+\usepackage{a4wide}
+\usepackage{xcolor}
+\usepackage{nameref}
+\usepackage[hidelinks]{hyperref}
+\usepackage{tocloft}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{mathptmx}
+\usepackage{subfig}
+\usepackage{textcase}
+\usepackage{import}
+\usepackage{float}
+\usepackage{anyfontsize, setspace}
+\usepackage{indentfirst}
+\usepackage{fourier-orns}
+\usepackage[total={5.8in, 9.6in}, top=1.3in, left=1.5in, includefoot]{geometry}
+\usepackage{blindtext}
+\usepackage{etoolbox}
+
+
+\usepackage[backend=biber, style=numeric, sorting=none]{biblatex}
+\addbibresource{refbib.bib}  % Replace with your bibliography file
+
+
+% Basic page and paragraph setup
+\pagestyle{plain}                    
+\setlength{\parindent}{3em}          
+\renewcommand{\baselinestretch}{1.5}  
+\setcounter{secnumdepth}{3}          
+
+% Custom header with decoration
+\renewcommand{\headrule}{%
+	\vspace{-8pt}\hrulefill
+	\raisebox{-2.1pt}{\quad\decofourleft\decotwo\decofourright\quad}\hrulefill
+}
+
+% Custom chapter title format
+\titleformat{\chapter}[display]
+	{\centering\normalfont\bfseries\fontsize{16}{20}\selectfont}
+	{Chapter \thechapter}{10pt}{\MakeUppercase}
+	\titlespacing*{\chapter}{0pt}{30pt}{20pt}
+
+\titleformat{name=\chapter,numberless}[display]
+	{\centering\normalfont\bfseries\fontsize{16}{20}\selectfont}
+	{}{10pt}{\MakeUppercase}
+
+% Custom section title format
+\titleformat{\section}
+	{\normalfont\bfseries\fontsize{14}{16}\selectfont}
+	{\thesection}{1em}{}
+	
+\titleformat{\subsection}
+	{\normalfont\bfseries\fontsize{14}{16}\selectfont}
+	{\thesubsection}{1em}{}
+	
+\titleformat{\subsubsection}
+	{\normalfont\bfseries\fontsize{14}{16}\selectfont}
+	{\thesubsubsection}{1em}{}
+
+
+
+% Adding an unnumbered chapter with TOC entry
+\newcommand{\achapter}[1]{
+	\chapter*{#1}
+	\addcontentsline{toc}{chapter}{\MakeUppercase{#1}}
+}
+
+% Title spacing of TOC and LOF
+\renewcommand{\listfigurename}{\begin{center}{\vspace{-1.5in}\Large LIST OF FIGURES \vspace{-0.3in}}\end{center}}
+
+\renewcommand{\contentsname}{\begin{center}{\vspace{-1.5in}\Large CONTENTS \vspace{-0.2in}}\end{center}}
+
+\setcounter{tocdepth}{3}
+
+\captionsetup[figure]{labelfont=bf}
+
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}} % for chapters
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}} % for sections
+
+% Tolerance settings to reduce overfull hbox warnings
+\tolerance=1 
+\emergencystretch=\maxdimen 
+\hyphenpenalty=10000 
+\hbadness=10000
+
+
+\date{}
+\title{PROJECT PHASE II TEMPLATE}
+
+
+% Commands for Project and Group Info %
+
+% Pronoun
+	\newcommand{\genderpronoun}[1]{%
+		\ifthenelse{\equal{#1}{F}}{%
+			her%
+		}{%
+			\ifthenelse{\equal{#1}{M}}{%
+				his%
+			}{%
+				% Default case if neither F nor M
+				Unknown gender%
+			}%
+		}%
+	}
+	
+
+% Automation File %
+	\input{Edit_this.tex}
+
+% Department
+	\newcommand{\vdept}[1]{\renewcommand{\dept}{#1}}
+	\newcommand{\vsem}[1]{\renewcommand{\sem}{#1}}
+
+% Subject
+	\newcommand{\vsubj}[1]{\renewcommand{\subj}{#1}}
+
+% Project Name
+	\newcommand{\vprojname}[1]{\renewcommand{\projname}{#1}}
+	
+	\newcommand{\vshortprojname}[1]{\renewcommand{\shortprojname}{#1}}
+
+% Month and Year %
+	\newcommand{\vprojdm}[1]{\renewcommand{\projdm}{#1}}
+	
+% Names of Students
+	\newcommand{\vgrpmema}[1]{\renewcommand{\grpmema}{#1}}
+	\newcommand{\vgrpmemb}[1]{\renewcommand{\grpmemb}{#1}}
+	\newcommand{\vgrpmemc}[1]{\renewcommand{\grpmemc}{#1}}
+	\newcommand{\vgrpmemd}[1]{\renewcommand{\grpmemd}{#1}}
+
+% Registration Numbers of Students
+	\newcommand{\vmemnuma}[1]{\renewcommand{\memnuma}{#1}}
+	\newcommand{\vmemnumb}[1]{\renewcommand{\memnumb}{#1}}
+	\newcommand{\vmemnumc}[1]{\renewcommand{\memnumc}{#1}}
+	\newcommand{\vmemnumd}[1]{\renewcommand{\memnumd}{#1}}
+
+% Head of Dharidhram
+	\newcommand{\vhodposition}[1]{\renewcommand{\hodposition}{#1}}
+	\newcommand{\vhodCaps}[1]{\renewcommand{\hodCaps}{#1}}
+	\newcommand{\vhodSentCase}[1]{\renewcommand{\hodSentCase}{#1}}
+	\newcommand{\vhodpronoun}[1]{\renewcommand{\hodpronoun}{#1}}
+
+% Project Guide
+	\newcommand{\vprojguideposition}[1]{\renewcommand{\projguideposition}{#1}}
+	\newcommand{\vprojguideCaps}[1]{\renewcommand{\projguideCaps}{#1}}
+	\newcommand{\vprojguideSentCase}[1]{\renewcommand{\projguideSentCase}{#1}}
+	\newcommand{\vprojguidepronoun}[1]{\renewcommand{\projguidepronoun}{#1}}
+
+% Project Coordinator
+	\newcommand{\vprojcoordposition}[1]{\renewcommand{\projcoordposition}{#1}}
+	\newcommand{\vprojcoordCaps}[1]{\renewcommand{\projcoordCaps}{#1}}
+	\newcommand{\vprojcoordSentCase}[1]{\renewcommand{\projcoordSentCase}{#1}}
+	\newcommand{\vprojcoordpronoun}[1]{\renewcommand{\projcoordpronoun}{#1}}
+		
+
+
+
+\begin{document}
+
+	% Import front page
+	\import{special_pages/}{front_page_group.tex}
+	\import{special_pages/}{front_page_group.tex}
+	\import{special_pages/}{front_page_member_1.tex}
+	\import{special_pages/}{front_page_member_2.tex}
+	\import{special_pages/}{front_page_member_3.tex}
+	\import{special_pages/}{front_page_member_4.tex}
+	
+	% Import decleration page
+	\import{special_pages/}{declaration_group.tex}
+	\import{special_pages/}{declaration_group.tex}
+	\import{special_pages/}{declaration_member_1.tex}
+	\import{special_pages/}{declaration_member_2.tex}
+	\import{special_pages/}{declaration_member_3.tex}
+	\import{special_pages/}{declaration_member_4.tex}
+	
+	% Import certificate page
+	\import{special_pages/}{certificate_group.tex}
+	\import{special_pages/}{certificate_group.tex}
+	\import{special_pages/}{certificate_member_1.tex}
+	\import{special_pages/}{certificate_member_2.tex}
+	\import{special_pages/}{certificate_member_3.tex}
+	\import{special_pages/}{certificate_member_4.tex}
+	
+	% Import acknowlegment page
+	\import{special_pages/}{acknowlegment_group.tex}
+	\import{special_pages/}{acknowlegment_group.tex}
+	\import{special_pages/}{acknowlegment_single.tex}
+	\import{special_pages/}{acknowlegment_single.tex}
+	\import{special_pages/}{acknowlegment_single.tex}
+	\import{special_pages/}{acknowlegment_single.tex}
+	
+	% Evaluation Sheet
+	\import{special_pages/}{evaluation_member_1.tex}
+	\import{special_pages/}{evaluation_member_2.tex}
+	\import{special_pages/}{evaluation_member_3.tex}
+	\import{special_pages/}{evaluation_member_4.tex}
+	
+	% Import abstract page
+	\import{main_pages/}{abstract.tex}
+	
+	\newpage
+	\tableofcontents
+	
+	\newpage
+	\addcontentsline{toc}{chapter}{LIST OF FIGURES}
+	\listoffigures 
+	
+	\import{main_pages/}{abbreviations.tex}
+	
+	% Import Chapters
+	\import{main_pages/}{chapter_1.tex}
+	\import{main_pages/}{chapter_2.tex}
+	\import{main_pages/}{chapter_3.tex}
+	\import{main_pages/}{chapter_4.tex}
+	\import{main_pages/}{chapter_5.tex}
+	
+	% References page
+	\renewcommand{\bibname}{References} % Changes the name from "Bibliography" to "References"
+	\addcontentsline{toc}{chapter}{REFERENCES}
+	{\fontsize{12}{14}\selectfont \printbibliography}
+
+	
+\end{document}

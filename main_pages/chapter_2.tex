@@ -1,0 +1,75 @@
+\newpage
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{{\footnotesize \textbf{\shortprojname}}\hfill{\footnotesize \leftmark}}
+\fancyfoot[C]{\hfill\thepage\hfill}
+
+	
+\fontsize{16}{18} \chapter{LITERATURE REVIEW} \label{chap:LitRev}
+	{
+		\fontsize{12}{14}	
+		Qin Zou et al., explained “SLAM is an important method used in indoor navigation for
+		autonomous vehicles \& robots. It helps create a global map of the environment. At the same
+		time, the robot’s position \& direction are determined. Recently, visual SLAM has seen
+		improvements in its abilities. Still, it can have problems in low-texture places like warehouses
+		with plain white walls. This makes finding locations accurately very tough. On the other hand,
+		LiDAR SLAM is more robust. It uses 3D information from LiDAR point clouds, which is why
+		it is often chosen for industrial uses, like AGVs. Even though several LiDAR SLAM methods
+		have been developed over the years, it’s not always clear what their strengths \& weaknesses
+		are. This can confuse both researchers and engineers. To help with this, a comparison of
+		different indoor navigation methods based on LiDAR SLAM is being done. There will also be
+		extensive tests to check how they perform in the real world. The findings from this analysis
+		will help both academic and industry researchers pick the best LiDAR SLAM system for their
+		specific needs.” \cite{9381521}\\
+		
+		Rohit Roy et al., explained “This research introduces a motion control approach for IMRs. It uses e-SLAM techniques but has limited sensor tools—specifically, it relies only on LiDAR. The path planning starts with basic floor plans created as the IMR explores. It begins at reach points and moves through steps for both turning \& straight-line motion. Eventually,  this leads to calculated points that link the key spots. By using LiDAR data, the IMR learns about its position \& surroundings over time. Notably, the upper sections of the LiDAR image focus on finding its location, while the lower parts deal with spotting obstacles. As it moves from one important point to another, the IMR must compile a complete LiDAR image to plan its path 	effectively. A major obstacle here is that LiDAR is the only reference for checking against the planned route based on the floor map. This makes it crucial to adjust for accurate distances related to that map and manage any deviations from the IMR's path to steer clear of barriers. There are important considerations around LiDAR settings too as well as controlling the speed of IMR. This study offers a thorough, step-by-step guide on how to carry out path planning \& motion control using exclusively LiDAR data. Additionally, it combines various software parts while improving control strategies through trials with different proportional gains for position, direction, and speed of the LiDAR within the IMR system.” \cite{23073606} \\
+		
+		Dong Shen et al., proposed a comparison of three different 2D-SLAM algorithms that use
+		laser radar within the ROS. The algorithms under review are Gmapping, Hector-SLAM, \&
+		Cartographer. The focus is on how these algorithms help indoor mobile robots navigate in
+		unknown environments. To make this comparison possible, a mobile robot platform was
+		created using ROS. This setup allowed for tests in real-world conditions. Each SLAM
+		algorithm's ability to create maps was evaluated through experiments conducted in a simple
+		corridor and a lab with various obstacles. Moreover, ten unique points in the actual
+		environment were chosen. We measured distances from the maps and compared them to those
+		recorded by a laser range finder. This was done for error analysis. The results of these
+		experiments helped to highlight the strengths and weaknesses of each SLAM algorithm. In
+		summary, Gmapping shows the best mapping accuracy in basic, small-scene environments. On
+		the other hand, Hector-SLAM is better suited for long corridor situations. Meanwhile,
+		Cartographer has clear advantages when used in more complex surroundings. This analysis
+		gives useful insights for both researchers \& practitioners. It aids in choosing suitable SLAM
+		algorithms for different robotic uses. \cite{3351966}\\
+		
+		Lili Mu et al., The system showcases contemporaneous Localization and Mapping (SLAM).
+		It uses graph-grounded optimization. Different detectors are combined, similar to Light
+		Detection and Ranging (LiDAR), a D camera, encoders, \& an Inertial Measurement Unit
+		(IMU). This system is really at situating those four detectors together. It employs the UKF to
+		reuse the 2D LiDAR and RGB-D camera point shadows. A fascinating point is how it handles
+		3D LiDAR points pall data generated from the RGB- D camera. This data is integrated into the
+		SLAM process during the step called successional enrollment. By doing this, it effectively
+		matches the 2D LiDAR information with the 3D RGB- D information. It uses CSM ways in
+		this matching process. In addition, during circle check discovery, this system boosts delicacy
+		for vindicating circle closures. It does so by furnishing detailed descriptions of the 3D point
+		pall data after the original matching with 2D LiDAR. The viability and effectiveness of this
+		multi-sensor SLAM frame have been completely tested. This was done through theoretical
+		studies, simulation trials, \& physical tests. The results from these trials show that this new
+		SLAM approach achieves remarkable mapping issues, with great perfection \& delicacy.
+		Similar results punctuate its promising operations in advanced robotics. \cite{9178302}\\
+		
+		Misha Urooj Khan et al., provides an overview of contemporaneous Localization and
+		Mapping (SLAM), fastening on its capability to achieve concurrent localization and chart
+		creation through tone recognition. It highlights the rapid-fire advancements in LiDAR-
+		grounded SLAM technology, driven by the wide relinquishment of LiDAR detectors across
+		colourful technological sectors. The discussion begins with a relative analysis of different
+		detector technologies, including radar, ultrawideband positioning, and Wi-Fi, emphasizing
+		their functional significance in robotization, robotics, and other disciplines. A bracket of
+		LiDAR detectors is also presented in irregular form for clarity. Later, the paper introduces
+		LiDAR-grounded SLAM by outlining its general visual and fine modelling. It explores three
+		crucial features of LiDAR SLAM — mapping, localization, and navigation — ahead
+		concluding with a comparison of LiDAR SLAM against other SLAM technologies and
+		addressing the challenges encountered during its perpetration. This comprehensive
+		examination underscores the applicability and efficacity of LiDAR in advancing SLAM
+		operations. \cite{9526266}
+		
+	}	
